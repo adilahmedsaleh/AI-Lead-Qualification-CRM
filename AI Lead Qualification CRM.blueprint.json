@@ -1,0 +1,2324 @@
+{
+    "name": "AI Lead Qualification CRM",
+    "flow": [
+        {
+            "id": 2,
+            "module": "google-forms:watchResponses",
+            "version": 2,
+            "parameters": {
+                "limit": 10,
+                "formId": "1rGDhJ3EqSNUBZcNvP9NjXDbybMuQQRqxiccUeTgMSlE",
+                "__IMTCONN__": 10527055
+            },
+            "mapper": {},
+            "metadata": {
+                "designer": {
+                    "x": -4317,
+                    "y": -1025
+                },
+                "restore": {
+                    "parameters": {
+                        "formId": {
+                            "rpcSearch": {
+                                "label": "Training Company – Lead Inquiry Form ",
+                                "value": "1rGDhJ3EqSNUBZcNvP9NjXDbybMuQQRqxiccUeTgMSlE"
+                            }
+                        },
+                        "__IMTCONN__": {
+                            "data": {
+                                "scoped": "true",
+                                "connection": "google"
+                            },
+                            "label": "Adil's Google connection (adilahmedsaleh2003@gmail.com)"
+                        }
+                    }
+                },
+                "parameters": [
+                    {
+                        "name": "__IMTCONN__",
+                        "type": "account:google",
+                        "label": "Connection",
+                        "required": true
+                    },
+                    {
+                        "name": "formId",
+                        "type": "text",
+                        "label": "Form ID",
+                        "required": true
+                    },
+                    {
+                        "name": "limit",
+                        "type": "uinteger",
+                        "label": "Limit",
+                        "required": true
+                    }
+                ],
+                "interface": [
+                    {
+                        "name": "responseId",
+                        "type": "text",
+                        "label": "Response ID"
+                    },
+                    {
+                        "name": "createTime",
+                        "type": "date",
+                        "label": "Create Time"
+                    },
+                    {
+                        "name": "lastSubmittedTime",
+                        "type": "date",
+                        "label": "Last Submitted Time"
+                    },
+                    {
+                        "name": "respondentEmail",
+                        "type": "text",
+                        "label": "Respondent Email"
+                    },
+                    {
+                        "name": "answers",
+                        "spec": [
+                            {
+                                "name": "5b29995e",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Name"
+                            },
+                            {
+                                "name": "7bbb0dba",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Email"
+                            },
+                            {
+                                "name": "761710e3",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Company"
+                            },
+                            {
+                                "name": "26bc8cbb",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Job Title"
+                            },
+                            {
+                                "name": "5a32d6f5",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "Budget"
+                            },
+                            {
+                                "name": "09860fdb",
+                                "spec": [
+                                    {
+                                        "name": "questionId",
+                                        "type": "text",
+                                        "label": "Question ID"
+                                    },
+                                    {
+                                        "name": "grade",
+                                        "spec": [
+                                            {
+                                                "name": "score",
+                                                "type": "number",
+                                                "label": "Score"
+                                            },
+                                            {
+                                                "name": "correct",
+                                                "type": "boolean",
+                                                "label": "Correct"
+                                            },
+                                            {
+                                                "name": "feedback",
+                                                "spec": [
+                                                    {
+                                                        "name": "text",
+                                                        "type": "text",
+                                                        "label": "Text"
+                                                    },
+                                                    {
+                                                        "name": "material",
+                                                        "spec": [
+                                                            {
+                                                                "name": "link",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "uri",
+                                                                        "type": "text",
+                                                                        "label": "URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Link"
+                                                            },
+                                                            {
+                                                                "name": "video",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "youtubeUri",
+                                                                        "type": "text",
+                                                                        "label": "Youtube URI"
+                                                                    },
+                                                                    {
+                                                                        "name": "displayText",
+                                                                        "type": "text",
+                                                                        "label": "Display Text"
+                                                                    }
+                                                                ],
+                                                                "type": "collection",
+                                                                "label": "Video"
+                                                            }
+                                                        ],
+                                                        "type": "array",
+                                                        "label": "Material"
+                                                    },
+                                                    {
+                                                        "name": "textAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "value",
+                                                                        "type": "text",
+                                                                        "label": "value"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "Text Answers"
+                                                    },
+                                                    {
+                                                        "name": "fileUploadAnswers",
+                                                        "spec": [
+                                                            {
+                                                                "name": "answers",
+                                                                "spec": [
+                                                                    {
+                                                                        "name": "fileId",
+                                                                        "type": "text",
+                                                                        "label": "File ID"
+                                                                    },
+                                                                    {
+                                                                        "name": "fileName",
+                                                                        "type": "text",
+                                                                        "label": "File Name"
+                                                                    },
+                                                                    {
+                                                                        "name": "mimeType",
+                                                                        "type": "text",
+                                                                        "label": "MIME Type"
+                                                                    }
+                                                                ],
+                                                                "type": "array",
+                                                                "label": "Answers"
+                                                            }
+                                                        ],
+                                                        "type": "collection",
+                                                        "label": "File Upload Answers"
+                                                    }
+                                                ],
+                                                "type": "collection",
+                                                "label": "Feedback"
+                                            }
+                                        ],
+                                        "type": "collection",
+                                        "label": "Grade"
+                                    }
+                                ],
+                                "type": "collection",
+                                "label": "  Message  "
+                            }
+                        ],
+                        "type": "collection",
+                        "label": "Answers"
+                    },
+                    {
+                        "name": "totalScore",
+                        "type": "number",
+                        "label": "Total Score"
+                    }
+                ]
+            }
+        },
+        {
+            "id": 4,
+            "module": "openai-gpt-3:askAnything",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "model": "gpt-5-nano",
+                "textPrompt": "You are a lead qualification assistant for a training company.\r\n\r\nAnalyze the Google Form response provided below.\r\n\r\nYour tasks:\r\n1. Summarize the inquiry in 1–2 sentences.\r\n2. Identify the lead's intent.\r\n3. Assign a Lead Score from 1–10.\r\n4. Recommend the next action.\r\n5. Classify the lead:\r\n   - High-quality when score >= 8\r\n   - Medium-quality when score is 5–7\r\n   - Low-quality when score < 5.\r\n\r\nScoring guidance:\r\n- 8–10: clear business need, realistic budget, strong buying intent, decision-maker or relevant role.\r\n- 5–7: genuine interest but missing urgency, budget, authority, or a clearly defined need.\r\n- 1–4: vague, irrelevant, no clear need, no buying intent, or unusable information.\r\n\r\nDo not invent information. Use only the information provided in the Google Form response.\r\n\r\nReturn ONLY valid JSON using exactly these keys:\r\n{\r\n  \"name\": \"\",\r\n  \"email\": \"\",\r\n  \"company\": \"\",\r\n  \"job_title\": \"\",\r\n  \"budget\": \"\",\r\n  \"message\": \"\",\r\n  \"summary\": \"\",\r\n  \"intent\": \"\",\r\n  \"lead_score\": 1,\r\n  \"lead_quality\": \"\",\r\n  \"next_action\": \"\"\r\n}\r\n\r\nGoogle Form response:\n{{2.answers}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -4017,
+                    "y": -1025
+                },
+                "restore": {
+                    "expect": {
+                        "model": {
+                            "label": "GPT-5 nanoThe most cost-effective option for casual conversation and straightforward, simple fact-retrieval"
+                        }
+                    }
+                },
+                "expect": [
+                    {
+                        "name": "model",
+                        "type": "select",
+                        "label": "Model",
+                        "required": true,
+                        "validate": {
+                            "enum": [
+                                "gpt-5-nano",
+                                "gpt-5.6-sol",
+                                "gpt-5.6-terra",
+                                "gpt-5.6-luna",
+                                "gpt-5.5",
+                                "gpt-5.4-nano",
+                                "gpt-5.4-mini",
+                                "gpt-5.4",
+                                "gpt-5.2",
+                                "gpt-5.1",
+                                "gpt-5",
+                                "gpt-5-mini"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "textPrompt",
+                        "type": "text",
+                        "label": "Text prompt",
+                        "required": true
+                    }
+                ]
+            },
+            "onerror": [
+                {
+                    "id": 22,
+                    "module": "google-sheets:addRow",
+                    "version": 2,
+                    "parameters": {
+                        "__IMTCONN__": 10527055
+                    },
+                    "mapper": {
+                        "mode": "select",
+                        "insertUnformatted": false,
+                        "valueInputOption": "USER_ENTERED",
+                        "insertDataOption": "INSERT_ROWS",
+                        "from": "drive",
+                        "spreadsheetId": "/1LbXvzQIVI_4xjU7IlZ-vX-sk4IfDhh29q-p1tk-0xc8",
+                        "sheetId": "Lead_Archive",
+                        "includesHeaders": true,
+                        "useColumnHeaders": true,
+                        "values": {
+                            "Timestamp": "{{2.createTime}}",
+                            "Name": "{{2.answers.`5b29995e`}}",
+                            "Email": "{{2.answers.`7bbb0dba`}}",
+                            "Company": "{{2.answers.`761710e3`}}",
+                            "Job Title": "{{2.answers.`26bc8cbb`}}",
+                            "Budget": "{{2.answers.`5a32d6f5`}}",
+                            "Message": "{{2.answers.`09860fdb`}}",
+                            "Lead Quality": "Unknown — AI Error",
+                            "Next Action": "Review lead manually",
+                            "Status": "AI Error"
+                        }
+                    },
+                    "metadata": {
+                        "designer": {
+                            "x": -3706,
+                            "y": -769
+                        },
+                        "restore": {
+                            "parameters": {
+                                "__IMTCONN__": {
+                                    "label": "Adil's Google connection (adilahmedsaleh2003@gmail.com)",
+                                    "data": {
+                                        "scoped": "true",
+                                        "connection": "google"
+                                    }
+                                }
+                            },
+                            "expect": {
+                                "mode": {
+                                    "label": "Search by path"
+                                },
+                                "insertUnformatted": {
+                                    "mode": "chose"
+                                },
+                                "valueInputOption": {
+                                    "mode": "chose",
+                                    "label": "User entered"
+                                },
+                                "insertDataOption": {
+                                    "mode": "chose",
+                                    "label": "Insert rows"
+                                },
+                                "from": {
+                                    "label": "My Drive"
+                                },
+                                "spreadsheetId": {
+                                    "path": [
+                                        "AI Lead Qualification CRM"
+                                    ]
+                                },
+                                "sheetId": {
+                                    "label": "Lead_Archive"
+                                },
+                                "includesHeaders": {
+                                    "label": "Yes"
+                                },
+                                "useColumnHeaders": {
+                                    "label": "Yes"
+                                }
+                            }
+                        },
+                        "parameters": [
+                            {
+                                "name": "__IMTCONN__",
+                                "type": "account:google",
+                                "label": "Connection",
+                                "required": true
+                            }
+                        ],
+                        "expect": [
+                            {
+                                "name": "mode",
+                                "type": "select",
+                                "label": "Search Method",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "select",
+                                        "fromAll",
+                                        "map"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "insertUnformatted",
+                                "type": "boolean",
+                                "label": "Unformatted",
+                                "required": true
+                            },
+                            {
+                                "name": "valueInputOption",
+                                "type": "select",
+                                "label": "Value input option",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "USER_ENTERED",
+                                        "RAW"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "insertDataOption",
+                                "type": "select",
+                                "label": "Insert data option",
+                                "validate": {
+                                    "enum": [
+                                        "INSERT_ROWS",
+                                        "OVERWRITE"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "from",
+                                "type": "select",
+                                "label": "Drive",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        "drive",
+                                        "share",
+                                        "team"
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "spreadsheetId",
+                                "type": "file",
+                                "label": "Spreadsheet Name",
+                                "required": true
+                            },
+                            {
+                                "name": "sheetId",
+                                "type": "select",
+                                "label": "Sheet Name",
+                                "required": true
+                            },
+                            {
+                                "name": "includesHeaders",
+                                "type": "select",
+                                "label": "Table contains headers",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        true,
+                                        false
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "useColumnHeaders",
+                                "type": "select",
+                                "label": "Use column headers as IDs of the columns",
+                                "required": true,
+                                "validate": {
+                                    "enum": [
+                                        true,
+                                        false
+                                    ]
+                                }
+                            },
+                            {
+                                "name": "values",
+                                "type": "collection",
+                                "label": "Values in columns",
+                                "metadata": [
+                                    [
+                                        [
+                                            "Timestamp",
+                                            "Name",
+                                            "Email",
+                                            "Company",
+                                            "Job Title",
+                                            "Budget",
+                                            "Message",
+                                            "AI Summary",
+                                            "Intent",
+                                            "Lead Score",
+                                            "Lead Quality",
+                                            "Next Action",
+                                            "Status"
+                                        ]
+                                    ]
+                                ],
+                                "spec": [
+                                    {
+                                        "name": "Timestamp",
+                                        "type": "text",
+                                        "label": "Timestamp (A)"
+                                    },
+                                    {
+                                        "name": "Name",
+                                        "type": "text",
+                                        "label": "Name (B)"
+                                    },
+                                    {
+                                        "name": "Email",
+                                        "type": "text",
+                                        "label": "Email (C)"
+                                    },
+                                    {
+                                        "name": "Company",
+                                        "type": "text",
+                                        "label": "Company (D)"
+                                    },
+                                    {
+                                        "name": "Job Title",
+                                        "type": "text",
+                                        "label": "Job Title (E)"
+                                    },
+                                    {
+                                        "name": "Budget",
+                                        "type": "text",
+                                        "label": "Budget (F)"
+                                    },
+                                    {
+                                        "name": "Message",
+                                        "type": "text",
+                                        "label": "Message (G)"
+                                    },
+                                    {
+                                        "name": "AI Summary",
+                                        "type": "text",
+                                        "label": "AI Summary (H)"
+                                    },
+                                    {
+                                        "name": "Intent",
+                                        "type": "text",
+                                        "label": "Intent (I)"
+                                    },
+                                    {
+                                        "name": "Lead Score",
+                                        "type": "text",
+                                        "label": "Lead Score (J)"
+                                    },
+                                    {
+                                        "name": "Lead Quality",
+                                        "type": "text",
+                                        "label": "Lead Quality (K)"
+                                    },
+                                    {
+                                        "name": "Next Action",
+                                        "type": "text",
+                                        "label": "Next Action (L)"
+                                    },
+                                    {
+                                        "name": "Status",
+                                        "type": "text",
+                                        "label": "Status (M)"
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "module": "json:ParseJSON",
+            "version": 1,
+            "parameters": {},
+            "mapper": {
+                "json": "{{4.result}}"
+            },
+            "metadata": {
+                "designer": {
+                    "x": -3717,
+                    "y": -1015
+                },
+                "restore": {},
+                "parameters": [
+                    {
+                        "name": "type",
+                        "type": "udt",
+                        "label": "Data structure"
+                    }
+                ],
+                "expect": [
+                    {
+                        "name": "json",
+                        "type": "text",
+                        "label": "JSON string",
+                        "required": true
+                    }
+                ]
+            }
+        },
+        {
+            "id": 13,
+            "module": "builtin:BasicRouter",
+            "version": 1,
+            "mapper": null,
+            "metadata": {
+                "designer": {
+                    "x": -3417,
+                    "y": -1025
+                }
+            },
+            "routes": [
+                {
+                    "flow": [
+                        {
+                            "id": 15,
+                            "module": "slack:CreateMessage",
+                            "version": 4,
+                            "parameters": {
+                                "__IMTCONN__": 10548064
+                            },
+                            "filter": {
+                                "name": "High-quality — Score 8-10",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{8.lead_score}}",
+                                            "o": "number:greaterorequal",
+                                            "b": "8"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "channelWType": "list",
+                                "text": "🔥 HIGH-QUALITY LEAD\nName: {{8.name}}\nEmail: {{8.email}}\nCompany: {{8.company}}\nJob Title: {{8.job_title}}\nBudget: {{8.budget}}\nLead Score: {{8.lead_score}}/10\nIntent: {{8.intent}}\n\nInquiry: {{8.message}}\n\nAI Summary: {{8.summary}}\nNext Action: {{8.next_action}}",
+                                "parse": false,
+                                "mrkdwn": true,
+                                "channelType": "public",
+                                "channel": "C0BVAE05KTN"
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": -3117,
+                                    "y": -1475
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Adil's Slack (bot) connection (aiagents-src8184.slack.com - make)",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "slack3"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "channelWType": {
+                                            "label": "Select from the list"
+                                        },
+                                        "reply_broadcast": {
+                                            "mode": "chose"
+                                        },
+                                        "link_names": {
+                                            "mode": "chose"
+                                        },
+                                        "parse": {
+                                            "mode": "chose"
+                                        },
+                                        "mrkdwn": {
+                                            "mode": "chose"
+                                        },
+                                        "unfurl_links": {
+                                            "mode": "chose"
+                                        },
+                                        "unfurl_media": {
+                                            "mode": "chose"
+                                        },
+                                        "channelType": {
+                                            "label": "Public channel"
+                                        },
+                                        "channel": {
+                                            "mode": "chose",
+                                            "label": "all-ai-agents"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:slack2,slack3",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "channelWType",
+                                        "type": "select",
+                                        "label": "Enter a channel ID or name",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "manualy",
+                                                "list"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "text",
+                                        "type": "text",
+                                        "label": "Text"
+                                    },
+                                    {
+                                        "name": "blocks",
+                                        "type": "text",
+                                        "label": "Blocks"
+                                    },
+                                    {
+                                        "name": "thread_ts",
+                                        "type": "text",
+                                        "label": "Thread message ID (time stamp)"
+                                    },
+                                    {
+                                        "name": "reply_broadcast",
+                                        "type": "boolean",
+                                        "label": "Reply broadcast"
+                                    },
+                                    {
+                                        "name": "link_names",
+                                        "type": "boolean",
+                                        "label": "Link names"
+                                    },
+                                    {
+                                        "name": "parse",
+                                        "type": "boolean",
+                                        "label": "Parse message text"
+                                    },
+                                    {
+                                        "name": "mrkdwn",
+                                        "type": "boolean",
+                                        "label": "Use markdown"
+                                    },
+                                    {
+                                        "name": "unfurl_links",
+                                        "type": "boolean",
+                                        "label": "Unfurl primarily text-based content"
+                                    },
+                                    {
+                                        "name": "unfurl_media",
+                                        "type": "boolean",
+                                        "label": "Unfurl media content"
+                                    },
+                                    {
+                                        "name": "icon_emoji",
+                                        "type": "text",
+                                        "label": "Icon emoji"
+                                    },
+                                    {
+                                        "name": "icon_url",
+                                        "type": "url",
+                                        "label": "Icon url"
+                                    },
+                                    {
+                                        "name": "username",
+                                        "type": "text",
+                                        "label": "User name"
+                                    },
+                                    {
+                                        "name": "channelType",
+                                        "type": "select",
+                                        "label": "Channel type",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "public",
+                                                "private",
+                                                "im",
+                                                "mpim"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "channel",
+                                        "type": "select",
+                                        "label": "Public channel",
+                                        "required": true
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 17,
+                            "module": "google-sheets:addRow",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 10548632
+                            },
+                            "filter": {
+                                "name": "Medium-quality — Score 5-7",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{8.lead_score}}",
+                                            "o": "number:greaterorequal",
+                                            "b": "5"
+                                        },
+                                        {
+                                            "a": "{{8.lead_score}}",
+                                            "o": "number:lessorequal",
+                                            "b": "7"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "mode": "select",
+                                "insertUnformatted": false,
+                                "valueInputOption": "USER_ENTERED",
+                                "insertDataOption": "INSERT_ROWS",
+                                "from": "drive",
+                                "spreadsheetId": "/1LbXvzQIVI_4xjU7IlZ-vX-sk4IfDhh29q-p1tk-0xc8",
+                                "sheetId": "CRM_Leads",
+                                "includesHeaders": true,
+                                "useColumnHeaders": true,
+                                "values": {
+                                    "Timestamp": "{{2.createTime}}",
+                                    "Name": "{{8.name}}",
+                                    "Email": "{{8.email}}",
+                                    "Company": "{{8.company}}",
+                                    "Job Title": "{{8.job_title}}",
+                                    "Budget": "{{8.budget}}",
+                                    "Message": "{{8.message}}",
+                                    "AI Summary": "{{8.summary}}",
+                                    "Intent": "{{8.intent}}",
+                                    "Lead Score": "{{8.lead_score}}",
+                                    "Lead Quality": "{{8.lead_quality}}",
+                                    "Next Action": "{{8.next_action}}",
+                                    "Status": "Processed"
+                                }
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": -3117,
+                                    "y": -1175
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Adil's Google connection",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "google"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "mode": {
+                                            "label": "Search by path"
+                                        },
+                                        "insertUnformatted": {
+                                            "mode": "chose"
+                                        },
+                                        "valueInputOption": {
+                                            "mode": "chose",
+                                            "label": "User entered"
+                                        },
+                                        "insertDataOption": {
+                                            "mode": "chose",
+                                            "label": "Insert rows"
+                                        },
+                                        "from": {
+                                            "label": "My Drive"
+                                        },
+                                        "spreadsheetId": {
+                                            "path": [
+                                                "AI Lead Qualification CRM"
+                                            ]
+                                        },
+                                        "sheetId": {
+                                            "label": "CRM_Leads"
+                                        },
+                                        "includesHeaders": {
+                                            "label": "Yes"
+                                        },
+                                        "useColumnHeaders": {
+                                            "label": "Yes"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:google",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "mode",
+                                        "type": "select",
+                                        "label": "Search Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "select",
+                                                "fromAll",
+                                                "map"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "insertUnformatted",
+                                        "type": "boolean",
+                                        "label": "Unformatted",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "valueInputOption",
+                                        "type": "select",
+                                        "label": "Value input option",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "USER_ENTERED",
+                                                "RAW"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "insertDataOption",
+                                        "type": "select",
+                                        "label": "Insert data option",
+                                        "validate": {
+                                            "enum": [
+                                                "INSERT_ROWS",
+                                                "OVERWRITE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "from",
+                                        "type": "select",
+                                        "label": "Drive",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "drive",
+                                                "share",
+                                                "team"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "spreadsheetId",
+                                        "type": "file",
+                                        "label": "Spreadsheet Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "sheetId",
+                                        "type": "select",
+                                        "label": "Sheet Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "includesHeaders",
+                                        "type": "select",
+                                        "label": "Table contains headers",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                true,
+                                                false
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "useColumnHeaders",
+                                        "type": "select",
+                                        "label": "Use column headers as IDs of the columns",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                true,
+                                                false
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "values",
+                                        "type": "collection",
+                                        "label": "Values in columns",
+                                        "metadata": [
+                                            [
+                                                [
+                                                    "Timestamp",
+                                                    "Name",
+                                                    "Email",
+                                                    "Company",
+                                                    "Job Title",
+                                                    "Budget",
+                                                    "Message",
+                                                    "AI Summary",
+                                                    "Intent",
+                                                    "Lead Score",
+                                                    "Lead Quality",
+                                                    "Next Action",
+                                                    "Status"
+                                                ]
+                                            ]
+                                        ],
+                                        "spec": [
+                                            {
+                                                "name": "Timestamp",
+                                                "type": "text",
+                                                "label": "Timestamp (A)"
+                                            },
+                                            {
+                                                "name": "Name",
+                                                "type": "text",
+                                                "label": "Name (B)"
+                                            },
+                                            {
+                                                "name": "Email",
+                                                "type": "text",
+                                                "label": "Email (C)"
+                                            },
+                                            {
+                                                "name": "Company",
+                                                "type": "text",
+                                                "label": "Company (D)"
+                                            },
+                                            {
+                                                "name": "Job Title",
+                                                "type": "text",
+                                                "label": "Job Title (E)"
+                                            },
+                                            {
+                                                "name": "Budget",
+                                                "type": "text",
+                                                "label": "Budget (F)"
+                                            },
+                                            {
+                                                "name": "Message",
+                                                "type": "text",
+                                                "label": "Message (G)"
+                                            },
+                                            {
+                                                "name": "AI Summary",
+                                                "type": "text",
+                                                "label": "AI Summary (H)"
+                                            },
+                                            {
+                                                "name": "Intent",
+                                                "type": "text",
+                                                "label": "Intent (I)"
+                                            },
+                                            {
+                                                "name": "Lead Score",
+                                                "type": "text",
+                                                "label": "Lead Score (J)"
+                                            },
+                                            {
+                                                "name": "Lead Quality",
+                                                "type": "text",
+                                                "label": "Lead Quality (K)"
+                                            },
+                                            {
+                                                "name": "Next Action",
+                                                "type": "text",
+                                                "label": "Next Action (L)"
+                                            },
+                                            {
+                                                "name": "Status",
+                                                "type": "text",
+                                                "label": "Status (M)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 19,
+                            "module": "google-sheets:addRow",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 10527055
+                            },
+                            "filter": {
+                                "name": "Low-quality — Score below 5",
+                                "conditions": [
+                                    [
+                                        {
+                                            "a": "{{8.lead_score}}",
+                                            "o": "number:less",
+                                            "b": "5"
+                                        }
+                                    ]
+                                ]
+                            },
+                            "mapper": {
+                                "mode": "select",
+                                "insertUnformatted": false,
+                                "valueInputOption": "USER_ENTERED",
+                                "insertDataOption": "INSERT_ROWS",
+                                "from": "drive",
+                                "spreadsheetId": "/1LbXvzQIVI_4xjU7IlZ-vX-sk4IfDhh29q-p1tk-0xc8",
+                                "sheetId": "Lead_Archive",
+                                "includesHeaders": true,
+                                "useColumnHeaders": true,
+                                "values": {
+                                    "Timestamp": "{{4.created}}",
+                                    "Name": "{{8.name}}",
+                                    "Email": "{{8.email}}",
+                                    "Company": "{{8.company}}",
+                                    "Job Title": "{{8.job_title}}",
+                                    "Budget": "{{8.budget}}",
+                                    "Message": "{{8.message}}",
+                                    "AI Summary": "{{8.summary}}",
+                                    "Intent": "{{8.intent}}",
+                                    "Lead Score": "{{8.lead_score}}",
+                                    "Lead Quality": "{{8.lead_quality}}",
+                                    "Next Action": "{{8.next_action}}",
+                                    "Status": "Processed"
+                                }
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": -3117,
+                                    "y": -875
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Adil's Google connection (adilahmedsaleh2003@gmail.com)",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "google"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "mode": {
+                                            "label": "Search by path"
+                                        },
+                                        "insertUnformatted": {
+                                            "mode": "chose"
+                                        },
+                                        "valueInputOption": {
+                                            "mode": "chose",
+                                            "label": "User entered"
+                                        },
+                                        "insertDataOption": {
+                                            "mode": "chose",
+                                            "label": "Insert rows"
+                                        },
+                                        "from": {
+                                            "label": "My Drive"
+                                        },
+                                        "spreadsheetId": {
+                                            "path": [
+                                                "AI Lead Qualification CRM"
+                                            ]
+                                        },
+                                        "sheetId": {
+                                            "label": "Lead_Archive"
+                                        },
+                                        "includesHeaders": {
+                                            "label": "Yes"
+                                        },
+                                        "useColumnHeaders": {
+                                            "label": "Yes"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:google",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "mode",
+                                        "type": "select",
+                                        "label": "Search Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "select",
+                                                "fromAll",
+                                                "map"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "insertUnformatted",
+                                        "type": "boolean",
+                                        "label": "Unformatted",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "valueInputOption",
+                                        "type": "select",
+                                        "label": "Value input option",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "USER_ENTERED",
+                                                "RAW"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "insertDataOption",
+                                        "type": "select",
+                                        "label": "Insert data option",
+                                        "validate": {
+                                            "enum": [
+                                                "INSERT_ROWS",
+                                                "OVERWRITE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "from",
+                                        "type": "select",
+                                        "label": "Drive",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "drive",
+                                                "share",
+                                                "team"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "spreadsheetId",
+                                        "type": "file",
+                                        "label": "Spreadsheet Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "sheetId",
+                                        "type": "select",
+                                        "label": "Sheet Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "includesHeaders",
+                                        "type": "select",
+                                        "label": "Table contains headers",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                true,
+                                                false
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "useColumnHeaders",
+                                        "type": "select",
+                                        "label": "Use column headers as IDs of the columns",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                true,
+                                                false
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "values",
+                                        "type": "collection",
+                                        "label": "Values in columns",
+                                        "metadata": [
+                                            [
+                                                [
+                                                    "Timestamp",
+                                                    "Name",
+                                                    "Email",
+                                                    "Company",
+                                                    "Job Title",
+                                                    "Budget",
+                                                    "Message",
+                                                    "AI Summary",
+                                                    "Intent",
+                                                    "Lead Score",
+                                                    "Lead Quality",
+                                                    "Next Action",
+                                                    "Status"
+                                                ]
+                                            ]
+                                        ],
+                                        "spec": [
+                                            {
+                                                "name": "Timestamp",
+                                                "type": "text",
+                                                "label": "Timestamp (A)"
+                                            },
+                                            {
+                                                "name": "Name",
+                                                "type": "text",
+                                                "label": "Name (B)"
+                                            },
+                                            {
+                                                "name": "Email",
+                                                "type": "text",
+                                                "label": "Email (C)"
+                                            },
+                                            {
+                                                "name": "Company",
+                                                "type": "text",
+                                                "label": "Company (D)"
+                                            },
+                                            {
+                                                "name": "Job Title",
+                                                "type": "text",
+                                                "label": "Job Title (E)"
+                                            },
+                                            {
+                                                "name": "Budget",
+                                                "type": "text",
+                                                "label": "Budget (F)"
+                                            },
+                                            {
+                                                "name": "Message",
+                                                "type": "text",
+                                                "label": "Message (G)"
+                                            },
+                                            {
+                                                "name": "AI Summary",
+                                                "type": "text",
+                                                "label": "AI Summary (H)"
+                                            },
+                                            {
+                                                "name": "Intent",
+                                                "type": "text",
+                                                "label": "Intent (I)"
+                                            },
+                                            {
+                                                "name": "Lead Score",
+                                                "type": "text",
+                                                "label": "Lead Score (J)"
+                                            },
+                                            {
+                                                "name": "Lead Quality",
+                                                "type": "text",
+                                                "label": "Lead Quality (K)"
+                                            },
+                                            {
+                                                "name": "Next Action",
+                                                "type": "text",
+                                                "label": "Next Action (L)"
+                                            },
+                                            {
+                                                "name": "Status",
+                                                "type": "text",
+                                                "label": "Status (M)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "flow": [
+                        {
+                            "id": 20,
+                            "module": "google-sheets:addRow",
+                            "version": 2,
+                            "parameters": {
+                                "__IMTCONN__": 10527055
+                            },
+                            "mapper": {
+                                "mode": "select",
+                                "insertUnformatted": false,
+                                "valueInputOption": "USER_ENTERED",
+                                "insertDataOption": "INSERT_ROWS",
+                                "from": "drive",
+                                "spreadsheetId": "/1LbXvzQIVI_4xjU7IlZ-vX-sk4IfDhh29q-p1tk-0xc8",
+                                "sheetId": "Lead_Log",
+                                "includesHeaders": true,
+                                "useColumnHeaders": true,
+                                "values": {
+                                    "Timestamp": "{{4.created}}",
+                                    "Name": "{{8.name}}",
+                                    "Email": "{{8.email}}",
+                                    "Company": "{{8.company}}",
+                                    "Job Title": "{{8.job_title}}",
+                                    "Budget": "{{8.budget}}",
+                                    "Message": "{{8.message}}",
+                                    "AI Summary": "{{8.summary}}",
+                                    "Intent": "{{8.intent}}",
+                                    "Lead Score": "{{8.lead_score}}",
+                                    "Lead Quality": "{{8.lead_quality}}",
+                                    "Next Action": "{{8.next_action}}",
+                                    "Destination": "Lead_Log",
+                                    "Status": "Processed"
+                                }
+                            },
+                            "metadata": {
+                                "designer": {
+                                    "x": -3117,
+                                    "y": -575
+                                },
+                                "restore": {
+                                    "parameters": {
+                                        "__IMTCONN__": {
+                                            "label": "Adil's Google connection (adilahmedsaleh2003@gmail.com)",
+                                            "data": {
+                                                "scoped": "true",
+                                                "connection": "google"
+                                            }
+                                        }
+                                    },
+                                    "expect": {
+                                        "mode": {
+                                            "label": "Search by path"
+                                        },
+                                        "insertUnformatted": {
+                                            "mode": "chose"
+                                        },
+                                        "valueInputOption": {
+                                            "mode": "chose",
+                                            "label": "User entered"
+                                        },
+                                        "insertDataOption": {
+                                            "mode": "chose",
+                                            "label": "Insert rows"
+                                        },
+                                        "from": {
+                                            "label": "My Drive"
+                                        },
+                                        "spreadsheetId": {
+                                            "path": [
+                                                "AI Lead Qualification CRM"
+                                            ]
+                                        },
+                                        "sheetId": {
+                                            "label": "Lead_Log"
+                                        },
+                                        "includesHeaders": {
+                                            "label": "Yes"
+                                        },
+                                        "useColumnHeaders": {
+                                            "label": "Yes"
+                                        }
+                                    }
+                                },
+                                "parameters": [
+                                    {
+                                        "name": "__IMTCONN__",
+                                        "type": "account:google",
+                                        "label": "Connection",
+                                        "required": true
+                                    }
+                                ],
+                                "expect": [
+                                    {
+                                        "name": "mode",
+                                        "type": "select",
+                                        "label": "Search Method",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "select",
+                                                "fromAll",
+                                                "map"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "insertUnformatted",
+                                        "type": "boolean",
+                                        "label": "Unformatted",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "valueInputOption",
+                                        "type": "select",
+                                        "label": "Value input option",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "USER_ENTERED",
+                                                "RAW"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "insertDataOption",
+                                        "type": "select",
+                                        "label": "Insert data option",
+                                        "validate": {
+                                            "enum": [
+                                                "INSERT_ROWS",
+                                                "OVERWRITE"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "from",
+                                        "type": "select",
+                                        "label": "Drive",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                "drive",
+                                                "share",
+                                                "team"
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "spreadsheetId",
+                                        "type": "file",
+                                        "label": "Spreadsheet Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "sheetId",
+                                        "type": "select",
+                                        "label": "Sheet Name",
+                                        "required": true
+                                    },
+                                    {
+                                        "name": "includesHeaders",
+                                        "type": "select",
+                                        "label": "Table contains headers",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                true,
+                                                false
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "useColumnHeaders",
+                                        "type": "select",
+                                        "label": "Use column headers as IDs of the columns",
+                                        "required": true,
+                                        "validate": {
+                                            "enum": [
+                                                true,
+                                                false
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "name": "values",
+                                        "type": "collection",
+                                        "label": "Values in columns",
+                                        "metadata": [
+                                            [
+                                                [
+                                                    "Timestamp",
+                                                    "Name",
+                                                    "Email",
+                                                    "Company",
+                                                    "Job Title",
+                                                    "Budget",
+                                                    "Message",
+                                                    "AI Summary",
+                                                    "Intent",
+                                                    "Lead Score",
+                                                    "Lead Quality",
+                                                    "Next Action",
+                                                    "Destination",
+                                                    "Status"
+                                                ]
+                                            ]
+                                        ],
+                                        "spec": [
+                                            {
+                                                "name": "Timestamp",
+                                                "type": "text",
+                                                "label": "Timestamp (A)"
+                                            },
+                                            {
+                                                "name": "Name",
+                                                "type": "text",
+                                                "label": "Name (B)"
+                                            },
+                                            {
+                                                "name": "Email",
+                                                "type": "text",
+                                                "label": "Email (C)"
+                                            },
+                                            {
+                                                "name": "Company",
+                                                "type": "text",
+                                                "label": "Company (D)"
+                                            },
+                                            {
+                                                "name": "Job Title",
+                                                "type": "text",
+                                                "label": "Job Title (E)"
+                                            },
+                                            {
+                                                "name": "Budget",
+                                                "type": "text",
+                                                "label": "Budget (F)"
+                                            },
+                                            {
+                                                "name": "Message",
+                                                "type": "text",
+                                                "label": "Message (G)"
+                                            },
+                                            {
+                                                "name": "AI Summary",
+                                                "type": "text",
+                                                "label": "AI Summary (H)"
+                                            },
+                                            {
+                                                "name": "Intent",
+                                                "type": "text",
+                                                "label": "Intent (I)"
+                                            },
+                                            {
+                                                "name": "Lead Score",
+                                                "type": "text",
+                                                "label": "Lead Score (J)"
+                                            },
+                                            {
+                                                "name": "Lead Quality",
+                                                "type": "text",
+                                                "label": "Lead Quality (K)"
+                                            },
+                                            {
+                                                "name": "Next Action",
+                                                "type": "text",
+                                                "label": "Next Action (L)"
+                                            },
+                                            {
+                                                "name": "Destination",
+                                                "type": "text",
+                                                "label": "Destination (M)"
+                                            },
+                                            {
+                                                "name": "Status",
+                                                "type": "text",
+                                                "label": "Status (N)"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "metadata": {
+        "instant": false,
+        "version": 1,
+        "scenario": {
+            "roundtrips": 1,
+            "maxErrors": 3,
+            "autoCommit": true,
+            "autoCommitTriggerLast": true,
+            "sequential": false,
+            "slots": null,
+            "confidential": false,
+            "dataloss": false,
+            "dlq": false,
+            "freshVariables": false
+        },
+        "designer": {
+            "orphans": []
+        },
+        "zone": "eu1.make.com",
+        "notes": []
+    }
+}
